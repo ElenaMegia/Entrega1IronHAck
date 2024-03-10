@@ -1,0 +1,104 @@
+/* Estilos base para mobile */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header, .menu, main, .footer-links {
+    display: block;
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #f2f2f2; /* Color de fondo para el menú */
+    text-align: center;
+    padding: 10px 0;
+}
+
+.menu-item {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black; /* Color del texto del menú */
+    border-bottom: 1px solid #ddd; /* Borde inferior de los elementos del menú */
+}
+
+.header-title {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Seccion principal y otros elementos */
+#section-1, .secondary-section, footer {
+    padding-left: 100%; /* Empujar el contenido principal a la derecha */
+}
+
+/* Estilos para desktop */
+@media screen and (min-width: 768px) {
+    .menu {
+        height: 100%;
+        width: 200px; /* Ancho fijo para el menú lateral */
+        text-align: left;
+    }
+
+    .menu-item {
+        border-bottom: none;
+        border-right: 1px solid #ddd; /* Borde derecho para los elementos del menú */
+    }
+
+    header {
+        margin-left: 200px; /* Empujar el encabezado a la derecha para hacer espacio para el menú */
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-title {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    #section-1, .secondary-section, footer {
+        padding-left: 200px; /* Empujar el contenido principal a la derecha para hacer espacio para el menú */
+    }
+
+    .img-div, .desktop {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: top;
+    }
+
+    .img-div img, .desktop img {
+        width: 100%; /* Hacer que las imágenes sean responsivas */
+        height: auto;
+    }
+
+    .footer-links {
+        margin-left: 200px; /* Empujar los enlaces del pie de página a la derecha */
+    }
+
+    .footer-link {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+/* Ajustes adicionales para garantizar la visibilidad en pantallas grandes */
+.secondary-section, footer {
+    margin-left: 200px;
+}
+
+/* Restablecer márgenes y paddings para listados */
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
